@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: Arial,Verdana, Tahoma, sans-serif;*/
+}
+
+
+header {
+    background-color: pink;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+header button {
+    float: right;
+    font-size: 18px;
+}
+
+.content {
+    flex: 1;
+    display:flex;
+}
+
+section {
+    background-color: deeppink;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+section.openPic {
+    width: 240px;
+}
+
+.frame {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.openPic  .frame {
+    flex-direction: column;
+}
+
+.card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    transition: all .5s ease;
+}
+
+.card:nth-child(even) {
+    background-color: #000;
+}
+
+.card:nth-child(even) .name {
+    color: #fff;
+}
+
+.card:hover {
+
+    cursor: pointer;
+}
+
+.card.dead {
+    background: red;
+}
+
+.card.dead img {
+    opacity: .20;
+}
+
+img {
+    width: 100%;
+
+}
+.openPic .frame img {
+    display: block;
+}
+
+.hero{
+    background-color: blue;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    width: 300px;
+    border: 10px solid #fff;
+    display:none;
+}
+
+.hero img:hover {
+    cursor: crosshair;
+}
+
+.bang {
+    display:none;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 120px;
+    color: red;
+    z-index: 1000;
+    top: 200px;
+    left: 60%;
+
+}
+.bang.shot {
+    z-index: 1000;
+    top: 20%;
+    left: 20%;
+    opacity: 1;
+}
+
+
+footer {
+    padding: 20px;
+    background-color: #30302F;
+    color: #efefef;
+}
